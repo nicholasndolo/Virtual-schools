@@ -6,28 +6,28 @@ import "./header.css";
 const navLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "/",
   },
   {
     display: "About",
-    url: "#",
+    url: "/about",
   },
 
   {
     display: "Schools",
-    url: "#",
+    url: "/schools",
   },
   {
     display: "Courses",
-    url: "#",
+    url: "courses",
   },
   {
     display: "Blog",
-    url: "#",
+    url: "/blog",
   },
   {
     display: "Enroll",
-    url: "#",
+    url: "login",
   },
 ];
 
