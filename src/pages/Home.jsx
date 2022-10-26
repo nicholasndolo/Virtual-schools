@@ -10,7 +10,7 @@ import FreeCourse from "../components/Free-course-section/FreeCourse";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
 import Footer from "../components/Footer/Footer";
-import School from "../components/School/school";
+// import School from "../components/School/school";
 const Home = () => {
   return (
     <Fragment>
@@ -18,7 +18,6 @@ const Home = () => {
       <HeroSection />
       <CompanySection />
       <AboutUs />
-      <School />
       <Courses />
       <ChooseUs />
       <Features />

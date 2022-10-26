@@ -1,57 +1,40 @@
 /* import React, {useState, useEffect} from "react";
 
 function School() {
-  const [school, setschools] = useState([]);
-  const [institute, setinstitute] = useState([]);
+  const [error, setError] = useState(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [items, setItems] = useState([]);
 
-
-  async function fetching(){
-    await fetch("https://virtualschools.herokuapp.com/schools")
-    .then((resp) => resp.json())
-    .then((school) => setschools(school));
-  }
-  //fetch data
   useEffect(() => {
-    fetching()
-  }, []);
-  console.log(school)
+    fetch("https://virtualschools.herokuapp.com/schools")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setIsLoaded(true);
+          setItems(result);
+        },
+        (error) => {
+          setIsLoaded(true);
+          setError(error);
+        }
+      )
+  }, [])
 
-  const addToInstitute = (schools) =>{
-    
-    let newInstitute = [...institute];
-    let itemInInstitute = newInstitute.find(
-      (item) => schools.name === item.name
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  } else if (!isLoaded) {
+    return <div>Loading...</div>;
+  } else {
+    return (
+      <ul>
+        {items.map(item => (
+          <li key={item.id}>
+            {item.name} {item.institute} {item.courses}
+          </li>
+        ))}
+      </ul>
     );
-    if (itemInInstitute) {
-        itemInInstitute.quantity++;
-    } else {
-        itemInInstitute = {
-        ...schools,
-        quantity: 1,
-      };
-     newInstitute.push(itemInInstitute);
-    }
-   setinstitute(newInstitute);
-   
   }
-
-
-  let container = school.map((schools) => (
-      <div className='contain'>
-
-        <img className='logo' src={schools.image} alt={schools.name} />
-        <h3>{schools.name}</h3>
-        <h4>{schools.institute}</h4>
-      </div>
-  
-  ))
-
-  return (
-    <div>
-      <div>{container}</div>
-    </div>
-  )
 }
-
 export default School
 */
