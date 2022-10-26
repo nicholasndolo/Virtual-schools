@@ -22,10 +22,6 @@ const navLinks = [
     url: "/courses",
   },
   {
-    display: "Blog",
-    url: "/blog",
-  },
-  {
     display: "Enroll",
     url: "/login",
   },

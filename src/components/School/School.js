@@ -1,4 +1,5 @@
-/* import React, {useState, useEffect} from "react";
+import React, {useState, useEffect} from "react";
+import "./School.css"
 
 function School() {
   const [error, setError] = useState(null);
@@ -26,15 +27,19 @@ function School() {
     return <div>Loading...</div>;
   } else {
     return (
-      <ul>
+      <div className="contain">
+       <ul>
         {items.map(item => (
+
           <li key={item.id}>
-            {item.name} {item.institute} {item.courses}
+             <img src={item.image_url} className="card-img-top" alt="event"/>  
+            {item.name}          
           </li>
         ))}
       </ul>
+      </div>
     );
   }
 }
 export default School
-*/
+
