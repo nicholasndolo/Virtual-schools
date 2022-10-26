@@ -19,7 +19,7 @@ const navLinks = [
   },
   {
     display: "Courses",
-    url: "courses",
+    url: "/courses",
   },
   {
     display: "Blog",
@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     display: "Enroll",
-    url: "login",
+    url: "/login",
   },
 ];
 
