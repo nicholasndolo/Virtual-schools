@@ -52,7 +52,7 @@ import React, { useState } from "react"
 
   return (
     <div className="Auth-form-container">
-      <img src="https://images.unsplash.com/photo-1507537509458-b8312d35a233?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt=""/>
+      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt=""/>
       <form className="Auth-form">
         <div className="Auth-form-content">
           <h3 className="Auth-form-title">Create an account</h3>

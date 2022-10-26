@@ -38,7 +38,7 @@ const AboutUs = () => {
                       <CountUp start={0} end={12} duration={2} suffix="M" />
                     </span>
 
-                    <p className="counter__title">Srudents Around World</p>
+                    <p className="counter__title">Students Around the World</p>
                   </div>
                 </div>
 
