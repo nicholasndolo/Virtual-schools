@@ -1,0 +1,11 @@
+.container-fluid{
+    margin-left: 10px;
+    color: aliceblue;
+}
+.nav-link{
+    margin-bottom: 20px;
+}
+.nav-link i {
+    align-items: flex-start;
+
+}
