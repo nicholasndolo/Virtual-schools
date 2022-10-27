@@ -5,19 +5,24 @@ import Auth from "./components/Login/Auth"
 import Home from "./pages/Home";
 import AboutUs from "./components/About-us/AboutUs";
 import Courses from "./components/Courses-section/Courses";
-import Learn from "./components/student-page/components/Learn";
-import School from "./components/School/school";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+//import Layout from "./Layout";
+import School from "./components/School/School";
 
 function App() {
   return (
     <BrowserRouter>
+    <Header />
       <Routes>
         <Route path="/learn" element={<Learn />} />
       <Route path="/" element={<Home />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<Auth />} />
+        <Route path="/schools" element={<School />} />
      <Route path="/courses" element={<Courses />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   )
 }
