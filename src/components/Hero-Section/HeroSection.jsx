@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import { Container, Row, Col } from "reactstrap";
 import heroImg from "../../assests/images/hero-img1.png";
 import "./hero-section.css";
+import { useNavigate } from "react-router-dom";
 
 const HeroSection = () => {
+  const [searchValue, setSearchValue]=useState("")
+  const navigate = useNavigate();
   return (
     <section>
       <Container>
@@ -20,8 +23,8 @@ const HeroSection = () => {
               </p>
             </div>
             <div className="search">
-              <input type="text" placeholder="Search" />
-              <button className="btn">Search</button>
+              <input type="text" placeholder="Search" onChange={e => setSearchValue(e.target.value.trim())}/>
+              <button className="btn" onClick={()=> navigate('/schools', { state: {searchValue} })}>Search</button>
             </div>
           </Col>
 

@@ -1,6 +1,5 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-
 import courseImg01 from "../../assests/images/web-development.png";
 import courseImg02 from "../../assests/images/kids-learning.png";
 import courseImg03 from "../../assests/images/seo.png";

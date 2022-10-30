@@ -21,6 +21,7 @@ import React, { useState, } from "react"
                 type="email"
                 className="form-control"
                 placeholder="Enter email"
+                required
               />
             </div>
             <div className="form-group mt-3">
@@ -29,6 +30,8 @@ import React, { useState, } from "react"
                 type="password"
                 className="form-control"
                 placeholder="Enter password"
+                required
+                pattern=".{8,}"
               />
             </div>
             <div className="d-grid gap-2 mt-3">
@@ -63,6 +66,7 @@ import React, { useState, } from "react"
               type="name"
               className="form-control mt-1"
               placeholder="e.g Jane Doe"
+              required
             />
           </div>
           <div className="form-group mt-3">
@@ -71,6 +75,8 @@ import React, { useState, } from "react"
               type="email"
               className="form-control mt-1"
               placeholder="Email Address"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
             />
           </div>
           <div className="form-group mt-3">
@@ -79,6 +85,8 @@ import React, { useState, } from "react"
               type="password"
               className="form-control mt-1"
               placeholder="Password"
+              required
+              pattern=".{8,}"
             />
           </div>
           <div className="form-group mt-3">
@@ -87,6 +95,7 @@ import React, { useState, } from "react"
               type="password"
               className="form-control mt-1"
               placeholder="Confirm password"
+              required
             />
           </div>
           <div className="d-grid gap-2 mt-3">

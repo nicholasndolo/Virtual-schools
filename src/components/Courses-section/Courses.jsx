@@ -7,7 +7,6 @@ import "./courses.css";
 import CourseCard from "./CourseCard";
 
 const coursesData = [
-  
   {
     id: "01",
     title: "Web Design BootCamp-2022 for Beginners",

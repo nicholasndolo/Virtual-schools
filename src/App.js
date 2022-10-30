@@ -7,7 +7,6 @@ import AboutUs from "./components/About-us/AboutUs";
 import Courses from "./components/Courses-section/Courses";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-//import Layout from "./Layout";
 import School from "./components/School/School";
 
 function App() {

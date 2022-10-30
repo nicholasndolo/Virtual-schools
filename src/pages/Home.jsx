@@ -8,14 +8,12 @@ import Features from "../components/Feature-section/Features";
 import FreeCourse from "../components/Free-course-section/FreeCourse";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
- import School from "../components/School/School";
 const Home = () => {
   return (
     <Fragment>
       <HeroSection />
       <CompanySection />
       <AboutUs />
-      <School />
       <Courses />
       <ChooseUs />
       <Features />

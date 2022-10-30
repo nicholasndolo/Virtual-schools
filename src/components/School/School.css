@@ -3,15 +3,9 @@
     top: 0px;
     margin: 0px;
     object-fit: cover;
-    height: 150px;
-    width: 50px; 
     border-radius: 0.25rem;
   }
-  
-  h4 {
-  color: #2F4454 ;
-  font-size: 20px;
-  }
+
   
   .contain{
     display: block;
@@ -24,4 +18,8 @@
     transition: 0.3s;
 
   } 
+  .contain li{
+    list-style: none;
+    text-align: center;
+  }
 
