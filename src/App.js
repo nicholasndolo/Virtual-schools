@@ -5,9 +5,10 @@ import Auth from "./components/Login/Auth"
 import Home from "./pages/Home";
 import AboutUs from "./components/About-us/AboutUs";
 import Courses from "./components/Courses-section/Courses";
+import School from "./components/School/School";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import School from "./components/School/School";
+import Educators from "./components/Educators/Educators";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/login" element={<Auth />} />
         <Route path="/schools" element={<School />} />
      <Route path="/courses" element={<Courses />} />
+        <Route path="/educators" element={<Educators />} />
       </Routes>
       <Footer />
     </BrowserRouter>
