@@ -1,27 +1,26 @@
-
-    import React, { useState } from 'react';
-    import UpdateStudents from './Updatestudents';
-    const StudentCard = ({data, handleDeleteStudent, handleUpdateStudents}) => {
+import React, { useState } from 'react';
+    import UpdateEducators from './UpdateEducators';
+    const EducatorCard = ({data, handleDeleteEducator, handleUpdateEducators}) => {
 
       const [isUpdating, setIsUpdating] = useState(false);
       const [visible, setVisible] = useState(true)
       const {name,email,password,school_id,course_id,owner_id} = data
     
       function handleDelete(){
-        fetch (`https://virtualschools.herokuapp.com/students`, {
+        fetch (`https://virtualschools.herokuapp.com/educators`, {
           method: 'DELETE',
         })
         .then((r) => r.json())
-        .then((deletedStudent) => handleDeleteStudent(deletedStudent))
+        .then((deletedEducator) => handleDeleteEducator(deletedEducator))
       }
       return (
         <div className='card'>
             {visible?
               (<div> { isUpdating ? (
-                <UpdateStudents
+                <UpdateEducators
                 data={data}
                 setIsUpdating={isUpdating}
-                handleUpdateStudents={handleUpdateStudents}
+                handleUpdateEducators={handleUpdateEducators}
                 />
                 ): (
                 <>
@@ -32,22 +31,12 @@
                   </div>
                 </>
                )} </div>):(
-                 <div className='students-card'>
-                   <h2 className='res-info' onClick={() => setVisible(!visible)}  >Students Info</h2>
+                 <div className='educators-card'>
+                   <h2 className='res-info' onClick={() => setVisible(!visible)}  >Educators Info</h2>
                  </div>
                )
                }
               </div>
               )
             }
-    export default StudentCard;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    export default EducatorCard;

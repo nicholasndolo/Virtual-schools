@@ -14,7 +14,12 @@ import Logout  from './Logout';
 import CreateStudent from './Createstudents';
 import CreateEducator from './CreateEducators';
 import CreateSchool from './Createschools';
-//import UpdateStudent from './Createeducator';
+import UpdateStudent from './Updatestudents';
+import Deletestudents from './Deletestudents'
+import UpdateEducator from './UpdateEducators';
+import UpdateSchool from './Updateschools';
+import DeleteEductors from './Deleteeductors';
+import DeleteSchools from './Deleteschools';
 
 
 export default class NavbarComp extends Component {
@@ -51,17 +56,36 @@ export default class NavbarComp extends Component {
                         <Route path="/create">
                             <CreateEducator />
                         </Route>
+                        <Route path="/update">
+                            <UpdateEducator />
+                        </Route>
+                        <Route path="/delete">
+                            <DeleteEductors />
+                        </Route>
+                       
                         <Route path="/students">
                             <Students/>
                         </Route>
                         <Route path="/create">
                             <CreateStudent />
                         </Route>
-                        <Route path="/schools">
+                        <Route path="/update">
+                            <UpdateStudent />
+                        </Route>
+                        <Route path="/delete">
+                            <Deletestudents />
+                         </Route>                      
+                       <Route path="/schools">
                             <Schools />
                         </Route>
                         <Route path="/create">
                             <CreateSchool />
+                        </Route>
+                        <Route path="/update">
+                            <UpdateSchool />
+                        </Route>
+                        <Route path="/delete">
+                            <DeleteSchools />
                         </Route>
                         <Route path="/logout">
                             <Logout/>
