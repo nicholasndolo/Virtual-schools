@@ -3,6 +3,14 @@ import React from 'react';
 export default function Lesson({lessonInfo}){
     // const {id, topic,course_id} = lessonObject
 
+    // function handleDeleteClick() {
+    //   fetch(`https://trendy1-music-librabry.herokuapp.com/songs/${lessonInfo.id}`, {
+    //     method: "DELETE",
+    //   })
+    //     .then((r) => r.json())
+    //     .then(() => onDelete(lessonInfo));
+    // }
+
     return (
     <div>
       
@@ -26,7 +34,7 @@ export default function Lesson({lessonInfo}){
                   </> )     
 
             })}
-            
+           {/* <button className="btn btn-primary" type="button" style={{background:'#27104e', color:'#FFFFFF'}} onClick={handleDeleteClick}>Delete</button>  */}
           </tbody>        
       </table>         
     </div>  
