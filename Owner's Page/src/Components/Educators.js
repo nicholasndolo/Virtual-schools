@@ -9,9 +9,9 @@ function TextExample() {
       <Card.Body>
         <Card.Title>Educators</Card.Title>
         
-        <Card.Link href="#">Create </Card.Link>
-        <Card.Link href="#">Update</Card.Link>
-        <Card.Link href="#">Delete</Card.Link>
+        <Card.Link href="create">Create </Card.Link>
+        <Card.Link href="update">Update</Card.Link>
+        <Card.Link href="delete">Delete</Card.Link>
       </Card.Body>
     </Card>
     </div>

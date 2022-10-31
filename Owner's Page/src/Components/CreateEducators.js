@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 
-const CreateStudent = () => {
-    const [student, setStudent] = useState({
+const CreateEducator = () => {
+    const [educator, setEducator] = useState({
       name: "",
       email: "",
       password: "",
@@ -14,21 +14,21 @@ const CreateStudent = () => {
     const[errors, setErrors] = useState([])
     const navigate = useHistory()
     function handleChange(e) {        
-        setStudent({ ...student, [e.target.name]: e.target.value });        
+        setEducator({ ...educator, [e.target.name]: e.target.value });        
     }
 
     function handleSubmit(e) {
         e.preventDefault()
-        fetch("https://virtualschools.herokuapp.com/students", {
+        fetch("https://virtualschools.herokuapp.com/educators", {
           method: "POST",
           // credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(student),
+          body: JSON.stringify(educator),
         }).then((r) => {
           if (r.ok) {
-            navigate.replace("/schools");
+            navigate.replace("/educators");
           } else {
             r.json()
             .then((err) => setErrors(err.errors));
@@ -47,39 +47,39 @@ const CreateStudent = () => {
 
       <form onSubmit={handleSubmit} className="addForm" >
 			<input type="text" 
-				defaultValue= {student.name}
-        placeholder= "Enter Student Name"
+				defaultValue= {educator.name}
+        placeholder= "Enter Educator Name"
 				name= "name"
 				onChange= {handleChange}
 				 />
 
         <input type="text" 
-				defaultValue={student.email}
-        placeholder="Enter Student Email"
+				defaultValue={educator.email}
+        placeholder="Enter Educator Email"
 				name="email"
 				onChange={handleChange}
 				 />
          <input type="password" 
-				defaultValue={student.password}
-        placeholder="Enter Student Password"
+				defaultValue={educator.password}
+        placeholder="Enter Educator Password"
 				name="password"
 				onChange={handleChange}
 				 />
          <input type="text" 
-				defaultValue={student.school_id}
+				defaultValue={educator.school_id}
         placeholder="Enter Student School_id"
 				name="school_id"
 				onChange={handleChange}
 				 />
          <input type="text" 
-				defaultValue={student.course_id}
-        placeholder="Enter Student Course_id"
+				defaultValue={educator.course_id}
+        placeholder="Enter Educator Course_id"
 				name="course_id"
 				onChange={handleChange}
 				 />
          <input type="text" 
-				defaultValue={student.owner_id}
-        placeholder="Enter Student Owner_id"
+				defaultValue={educator.owner_id}
+        placeholder="Enter Educator Owner_id"
 				name="owner_id"
 				onChange={handleChange}
 				 />
@@ -93,4 +93,4 @@ const CreateStudent = () => {
   );
 }
 
-export default CreateStudent
+export default CreateEducator

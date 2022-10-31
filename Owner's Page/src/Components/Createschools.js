@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
+import Educators from './Educators'
 
-const CreateStudent = () => {
-    const [student, setStudent] = useState({
+const CreateSchool = () => {
+    const [school, setSchool] = useState({
       name: "",
-      email: "",
-      password: "",
       school_id: "",
       course_id: "",
       owner_id: "",
@@ -14,18 +13,18 @@ const CreateStudent = () => {
     const[errors, setErrors] = useState([])
     const navigate = useHistory()
     function handleChange(e) {        
-        setStudent({ ...student, [e.target.name]: e.target.value });        
+        setSchool({ ...Educators, [e.target.name]: e.target.value });        
     }
 
     function handleSubmit(e) {
         e.preventDefault()
-        fetch("https://virtualschools.herokuapp.com/students", {
+        fetch("https://virtualschools.herokuapp.com/schools", {
           method: "POST",
           // credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(student),
+          body: JSON.stringify(school),
         }).then((r) => {
           if (r.ok) {
             navigate.replace("/schools");
@@ -47,39 +46,34 @@ const CreateStudent = () => {
 
       <form onSubmit={handleSubmit} className="addForm" >
 			<input type="text" 
-				defaultValue= {student.name}
-        placeholder= "Enter Student Name"
+				defaultValue= {school.name}
+        placeholder= "Enter School Name"
 				name= "name"
 				onChange= {handleChange}
 				 />
 
         <input type="text" 
-				defaultValue={student.email}
-        placeholder="Enter Student Email"
+				defaultValue={school.email}
+        placeholder="Enter School Email"
 				name="email"
 				onChange={handleChange}
 				 />
-         <input type="password" 
-				defaultValue={student.password}
-        placeholder="Enter Student Password"
-				name="password"
-				onChange={handleChange}
-				 />
+         
          <input type="text" 
-				defaultValue={student.school_id}
+				defaultValue={school.school_id}
         placeholder="Enter Student School_id"
 				name="school_id"
 				onChange={handleChange}
 				 />
          <input type="text" 
-				defaultValue={student.course_id}
-        placeholder="Enter Student Course_id"
+				defaultValue={school.course_id}
+        placeholder="Enter School Course_id"
 				name="course_id"
 				onChange={handleChange}
 				 />
          <input type="text" 
-				defaultValue={student.owner_id}
-        placeholder="Enter Student Owner_id"
+				defaultValue={school.owner_id}
+        placeholder="Enter School Owner_id"
 				name="owner_id"
 				onChange={handleChange}
 				 />
@@ -93,4 +87,4 @@ const CreateStudent = () => {
   );
 }
 
-export default CreateStudent
+export default CreateSchool

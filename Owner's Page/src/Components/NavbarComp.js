@@ -12,6 +12,8 @@ import Students from './Students';
 import Schools from './Schools';
 import Logout  from './Logout';
 import CreateStudent from './Createstudents';
+import CreateEducator from './CreateEducators';
+import CreateSchool from './Createschools';
 //import UpdateStudent from './Createeducator';
 
 
@@ -46,6 +48,9 @@ export default class NavbarComp extends Component {
                         <Route path="/educators">
                             <Educators />
                         </Route>
+                        <Route path="/create">
+                            <CreateEducator />
+                        </Route>
                         <Route path="/students">
                             <Students/>
                         </Route>
@@ -54,6 +59,9 @@ export default class NavbarComp extends Component {
                         </Route>
                         <Route path="/schools">
                             <Schools />
+                        </Route>
+                        <Route path="/create">
+                            <CreateSchool />
                         </Route>
                         <Route path="/logout">
                             <Logout/>
