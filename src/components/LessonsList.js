@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Lesson from './Lesson';
+import NewLesson from './NewLesson';
 
 
 export default function LessonList(){
@@ -16,7 +17,8 @@ export default function LessonList(){
 
     return (
         <div>
-            <Lesson lessonInfo = {lessonInfo}/>                       
+            <Lesson lessonInfo = {lessonInfo}/>  
+            <NewLesson/>                     
         </div>
     );    
 }
