@@ -15,14 +15,14 @@ export default function Attendance({attendanceInfo}){
           </tr>
         </thead>  
           <tbody>
-            {attendanceInfo.map((item) => {
+            {attendanceInfo.map((attendance) => {
                 return (
                   <> 
                   <tr className="table-secondary">
-                    <td >{item.id}</td>
-                    <td >{item.percentage}</td>
-                    <td >{item.lesson_id}</td>  
-                    <td >{item.student_id}</td>          
+                    <td >{attendance.id}</td>
+                    <td >{attendance.percentage}</td>
+                    <td >{attendance.lesson_id}</td>  
+                    <td >{attendance.student_id}</td>          
                   </tr>
                   </> )     
 
