@@ -8,8 +8,8 @@ import Features from "../components/Feature-section/Features";
 import FreeCourse from "../components/Free-course-section/FreeCourse";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
-import CreateStudent from "../components/CreateStudent";
-import LessonList from "../components/LessonsList";
+//import CreateStudent from "../components/";
+import LessonList from "../components/Lessons/LessonsList";
 const Home = () => {
   return (
     <Fragment>
@@ -22,7 +22,6 @@ const Home = () => {
       <FreeCourse />
       <Testimonials />
       <Newsletter />
-      <CreateStudent/>
       <LessonList/>
     </Fragment>
   );
