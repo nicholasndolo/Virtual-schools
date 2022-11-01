@@ -15,6 +15,7 @@ export default function CreateOwner(){
     }
 
     function handleSubmit(e) {
+        e.preventDefault()
         fetch("https://virtualschools.herokuapp.com/owners", {
             method: "POST",
             headers: {
@@ -25,22 +26,27 @@ export default function CreateOwner(){
         })
         .then((r) => {
             if (r.ok) {
-                navigate("/") 
+                navigate("/login") 
             } else {
-                r.json().catch((err) => console.log(setErrors(err.errors)))
-                
+                r.json().then((err) => setErrors(err.errors))
             }
         })
         .then((data) => {
                       // save the token to localStorage for future access
                       localStorage.setItem("jwt", data.jwt);
                       // save the owner somewhere (in state!) to log the owner in
-                      setOwner(data.owner);
+                      console.log(setOwner(data.owner));
                       //console.log(data.owner)
         })        
     }
+    const errorMessage = (errors.map((error, index)=>(
+        <ul>
+          <li className='error' key={index}>{error}</li>
+        </ul>
+      )))
     return (
         <div className="Auth-form-container">
+            {errors.length > 0?  errorMessage : null}
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt=""/>
           <form className="Auth-form"  onSubmit={handleSubmit}>
             <div className="Auth-form-content">
@@ -100,14 +106,7 @@ export default function CreateOwner(){
                 <button type="submit" className="btn btn-info">
                   Sign Up
                 </button>
-              </div>
-              <div className="text-center">
-                Already have an account? {" "} <br/>
-                <span className="link-primary" //onClick={changeAuthMode}
-                >
-                  Login
-                </span> here
-              </div>
+              </div>              
             </div>
           </form>
         </div>
