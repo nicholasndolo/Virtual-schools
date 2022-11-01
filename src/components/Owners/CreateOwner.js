@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Alert } from 'react-alert'
 
 export default function CreateOwner(){
-  
     const [owner, setOwner] = useState({
             name: "",
             email: "",
@@ -17,7 +17,6 @@ export default function CreateOwner(){
 
     function handleSubmit(e) {
         e.preventDefault()
-        // e.target.reset()
         fetch("https://virtualschools.herokuapp.com/owners", {
             method: "POST",
             headers: {
@@ -28,7 +27,8 @@ export default function CreateOwner(){
         })
         .then((r) => {
             if (r.ok) {
-                navigate("/admin") 
+              alert ('Successfully Registered!')
+                navigate("/login") 
             } else {
                 r.json().then((err) => setErrors(err.errors))
             }

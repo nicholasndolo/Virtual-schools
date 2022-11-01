@@ -50,21 +50,19 @@ export default class NavbarComp extends Component {
                         </Navbar.Collapse>
                     </Navbar>
                 </div>
-                <Educators />
-                <CreateEducator />
-                <UpdateEducator />
+                
                 {/* <div>
                     <Routes>
                         <Route path="/educators">
-                            
+                            <Educators />
                         </Route>
 
                         <Route path="/create">
-                            
+                            <CreateEducator />
                         </Route>
 
                         <Route path="/update">
-                           
+                            <UpdateEducator />
                         </Route>
 
                         <Route path="/delete">
