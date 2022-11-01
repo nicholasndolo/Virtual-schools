@@ -4,7 +4,7 @@ import UpdateSchools from './Updateschools';
 
       const [isUpdating, setIsUpdating] = useState(false);
       const [visible, setVisible] = useState(true)
-      const {name,school_id,course_id,owner_id} = data
+      const {id,name,school_id,course_id,owner_id} = data
     
       function handleDelete(){
         fetch (`https://virtualschools.herokuapp.com/schools`, {

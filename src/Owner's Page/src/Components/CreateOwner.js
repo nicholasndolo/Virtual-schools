@@ -26,7 +26,7 @@ export default function CreateOwner(){
         })
         .then((r) => {
             if (r.ok) {
-                navigate("/login") 
+                navigate("/owners") 
             } else {
                 r.json().then((err) => setErrors(err.errors))
             }
@@ -112,3 +112,10 @@ export default function CreateOwner(){
         </div>
     )   
 }
+
+
+
+
+
+
+

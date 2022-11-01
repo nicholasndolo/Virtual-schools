@@ -5,7 +5,7 @@
 
       const [isUpdating, setIsUpdating] = useState(false);
       const [visible, setVisible] = useState(true)
-      const {name,email,password,school_id,course_id,owner_id} = data
+      const {id,name,email,password,school_id,course_id,owner_id} = data
     
       function handleDelete(){
         fetch (`https://virtualschools.herokuapp.com/students`, {
