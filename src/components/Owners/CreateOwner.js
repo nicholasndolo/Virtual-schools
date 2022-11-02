@@ -27,7 +27,7 @@ export default function CreateOwner(){
         })
         .then((r) => {
             if (r.ok) {
-                navigate("/owners") 
+                navigate("/login") 
             } else {
                 r.json().then((err) => setErrors(err.errors))
             }

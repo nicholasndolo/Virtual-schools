@@ -6,7 +6,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
-
+import Home from '../../pages/Home';
 import Educators from './Educators';
 import Students from './Students';
 import Schools from './Schools';

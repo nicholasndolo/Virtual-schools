@@ -23,7 +23,7 @@ const navLinks = [
   },
   {
     display: "Enroll",
-    url: "/enroll",
+    url: "/login",
   },
 ];
 
