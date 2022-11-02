@@ -1,5 +1,5 @@
-/*import Card from 'react-bootstrap/Card';
-import '../App.css'
+import Card from 'react-bootstrap/Card';
+import './src/Owner.css'
 
 
 

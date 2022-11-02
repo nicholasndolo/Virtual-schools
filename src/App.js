@@ -9,9 +9,8 @@ import School from "./components/School/School";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Educators from "./components/Educators/Educators";
-import CreateOwner from "./Owner's Page/src/Components/CreateOwner";
-//import App from "./Owner's Page/src/App"
-import NavbarComp from "./Owner's Page/src/Components/NavbarComp";
+import Owner from "./components/Owners/Owner";
+// import CreateOwner from "./Owner's Page/src/Components/CreateOwner";
 
 function App() {
   return (
@@ -24,9 +23,9 @@ function App() {
         <Route path="/enroll" element={<CreateOwner />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/schools" element={<School />} />
-     <Route path="/courses" element={<Courses />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/educators" element={<Educators />} />
-      
+        <Route path="/admin" element={<Owner/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
