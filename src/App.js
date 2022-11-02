@@ -8,6 +8,7 @@ import Courses from "./components/Courses-section/Courses";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import School from "./components/School/School";
+import UpdateCourse from "./components/UpdateCourse";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/schools" element={<School />} />
+        <Route path="/course/:courseId" element={<UpdateCourse />} />
      <Route path="/courses" element={<Courses />} />
       </Routes>
       <Footer />
