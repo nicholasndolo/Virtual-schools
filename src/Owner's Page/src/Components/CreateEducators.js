@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import '../App.css'
 
 const CreateEducator = () => {
     const [educator, setEducator] = useState({
@@ -64,6 +65,8 @@ const CreateEducator = () => {
         placeholder="Enter Educator Password"
 				name="password"
 				onChange={handleChange}
+        required
+        pattern=".{8,}"
 				 />
          <input type="text" 
 				defaultValue={educator.school_id}

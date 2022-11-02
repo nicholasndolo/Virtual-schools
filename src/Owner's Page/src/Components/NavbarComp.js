@@ -23,7 +23,7 @@ export default class NavbarComp extends Component {
       <Router>
         <div>
           <Navbar bg="dark" variant={"dark"} expand="lg">
-            <Navbar.Brand href="#">E-Masomo</Navbar.Brand>
+            <Navbar.Brand href="/">E-Masomo</Navbar.Brand>
             <Navbar.Toggle aria-controls="navbarScroll" />
             <Navbar.Collapse id="navbarScroll">
               <Nav
