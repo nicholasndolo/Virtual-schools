@@ -1,5 +1,5 @@
 import React, { useState, } from "react"
-import CreateOwner from "../../Owner's Page/src/Components/CreateOwner"
+//import CreateOwner from "../../Owner's Page/src/Components/CreateOwner"
 
  function Auth (props) {
   let [authMode, setAuthMode] = useState("signin")
