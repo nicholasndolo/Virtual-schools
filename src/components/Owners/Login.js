@@ -8,6 +8,10 @@ export default function Login(){
             password: "",            
           })
     const [error, setError] = useState("");
+    // const [token, setToken] = useState("")
+    // useEffect((() => {
+    //   setToken(localStorage.getItem("jwt"))
+    // }), [])
     const navigate = useNavigate();
     function handleChange(e) {
             setOwnerLogin({ ...ownerLogin, [e.target.name]: e.target.value });
@@ -32,17 +36,18 @@ export default function Login(){
             }
         })
         .then((data) => {
+          // "jwt", JSON.stringify(newUser.jwt)
                       // save the token to localStorage for future access
-                      localStorage.setItem("jwt", data.jwt);
+                      localStorage.setItem("jwt", JSON.stringify(ownerLogin.jwt))
+                      // localStorage.setItem("jwt", data.jwt);
                       // save the owner somewhere (in state!) to log the owner in
-                      console.log(setOwnerLogin(data.ownerLogin));
-                      //console.log(data.owner)
+                      setOwnerLogin(data.ownerLogin);
+                      //console.log(data.owner)newUser
         })        
     }
     
     return (
-        <div className="Auth-form-container">
-            {/* {error.length > 0?  errorMessage : null} */}
+        <div className="Auth-form-container">            
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt=""/>
           <form className="Auth-form"  onSubmit={handleSubmit}>
             <div className="Auth-form-content">
