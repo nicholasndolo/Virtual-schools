@@ -1,4 +1,4 @@
-import React from "react";
+/*import React from "react";
 
 const handleLogout = () => {
     localStorage.removeItem('jwt')
@@ -6,3 +6,4 @@ const handleLogout = () => {
 }
 
 export default handleLogout;
+*/

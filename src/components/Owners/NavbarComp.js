@@ -1,21 +1,27 @@
-import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import React, { Component } from 'react'
+import { Navbar,Nav } from 'react-bootstrap'
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+} from "react-router-dom";
+import Home from '../../pages/Home';
+import Educators from './Educators';
+import Students from './Students';
+import Schools from './Schools';
+// import Logout  from './Logout';
+import CreateStudent from './Createstudents';
+import CreateEducator from './CreateEducators';
+import CreateSchool from './Createschools';
+import UpdateStudent from './Updatestudents';
+import Deletestudents from './Deletestudents'
+import UpdateEducator from './UpdateEducators';
+import UpdateSchool from './Updateschools';
+import DeleteEductors from './Deleteeductors';
+import DeleteSchools from './Deleteschools';
+import Logout from './Logout';
 
-import Educators from "./Educators";
-import Students from "./Students";
-import Schools from "./Schools";
-import Logout from "./Logout";
-import CreateStudent from "./Createstudents";
-import CreateEducator from "./CreateEducators";
-import CreateSchool from "./Createschools";
-import UpdateStudent from "./Updatestudents";
-import Deletestudents from "./Deletestudents";
-import UpdateEducator from "./UpdateEducators";
-import UpdateSchool from "./Updateschools";
-import DeleteEductors from "./Deleteeductors";
-import DeleteSchools from "./Deleteschools";
-import Home from "./Home";
 
 export default class NavbarComp extends Component {
   render() {
