@@ -3,7 +3,7 @@
   align-content: center;
   flex-wrap: wrap;
 }
-/*a:link, a:visited {
+a:link, a:visited {
     background-color: white;
     color: black;
     border: 2px solid green;
@@ -17,7 +17,7 @@
   
   a:hover, a:active {
     background-color: #3CBC8D;
-    color: white;
+    color: black;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
   */
@@ -126,4 +126,9 @@ label {
   margin-bottom: 1em;
   font-size: 15px;
   color: rgb(34, 34, 34);
+}
+.owners{
+  display:flex;
+  justify-content: center;
+
 }

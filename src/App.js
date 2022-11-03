@@ -1,39 +1,57 @@
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 //import "./App.css"
-import { BrowserRouter, Routes, Route } from "react-router-dom"
-import Auth from "./components/Login/Auth"
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Auth from "./components/Login/Auth";
 import Home from "./pages/Home";
 import AboutUs from "./components/About-us/AboutUs";
-import Courses from "./components/Courses-section/Courses";
+//import Courses from "./components/Courses-section/Courses";
 import School from "./components/School/School";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import School from "./components/School/School";
-import UpdateCourse from "./components/UpdateCourse";
+import UpdateCourse from "./components/Courses/UpdateCourse";
 import Educators from "./components/Educators/Educators";
-import Owner from "./components/Owners/Owner";
-//import NavbarComp from "./components/Owners/NavbarComp";
+import Owner from "./pages/Owner";
 import CreateOwner from "./components/Owners/CreateOwner";
+import CourseList from "./components/Courses/CourseList";
+import CreateStudent from "./components/Owners/Createstudents";
+import CreateEducator from "./components/Owners/CreateEducators";
+import CreateSchool from "./components/Owners/Createschools";
+import UpdateStudent from "./components/Owners/Updatestudents";
+import Deletestudents from "./components/Owners/Deletestudents";
+import UpdateEducator from "./components/Owners/UpdateEducators";
+import UpdateSchool from "./components/Owners/Updateschools";
+import DeleteEductors from "./components/Owners/Deleteeductors";
+import DeleteSchools from "./components/Owners/Deleteschools";
+import Students from "./components/Owners/Students";
+import Schools from "./components/Owners/Schools";
+//import Logout from "./components/Owners/Logout";
 
 function App() {
   return (
     <BrowserRouter>
-    <Header />
       <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<CourseList />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/enroll" element={<CreateOwner />} />
         <Route path="/login" element={<Auth />} />
         <Route path="/schools" element={<School />} />
-        <Route path="/course/:courseId" element={<UpdateCourse />} />
-     <Route path="/courses" element={<Courses />} />
-        <Route path="/courses" element={<Courses />
+        <Route path="/course/:courseId" element={<UpdateCourse />} />/
         <Route path="/educators" element={<Educators />} />
-        <Route path="/admin" element={<Owner/>}/> 
+        <Route path="/admin" element={<Owner />} />
+        <Route path="/educator" element={<Educators />} />
+        <Route path="/create/educator" element={<CreateEducator />} />
+        <Route path="/update/educator" element={<UpdateEducator />} />
+        <Route path="/delete/educator" element={<DeleteEductors />} />
+        <Route path="/students" element={<Students />} />
+        <Route path="/create/student" element={<CreateStudent />} />
+        <Route path="/update/student" element={<UpdateStudent />} />
+        <Route path="/delete/student" element={<Deletestudents />} />
+        <Route path="/schools" element={<Schools />} />
+        <Route path="/create/school" element={<CreateSchool />} />
+        <Route path="/update/school" element={<UpdateSchool />} />
+        <Route path="/delete/school" element={<DeleteSchools />} />
       </Routes>
-      <Footer />
     </BrowserRouter>
-  )
+  );
 }
 
 export default App;

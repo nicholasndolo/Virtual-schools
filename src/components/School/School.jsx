@@ -1,21 +1,10 @@
 import React, {useState, useEffect} from "react";
 import "./School.css"
-import {useLocation} from "react-router-dom"
 
 function School() {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  const[searchItems, setSearchItems] =useState([])
-  const {state} = useLocation();
-  const { searchValue } = state;
-  useEffect(()=>{
-    for(let i = 0; i < items.length; i++){
-    const item = items[i].name.toLowerCase()
-    if(item.contains(searchValue.lowerCase())){
-    searchItems.push(item[i]);
-    }}
-},[])
   useEffect(() => {
     fetch("https://virtualschools.herokuapp.com/schools")
       .then(res => res.json())
@@ -37,7 +26,7 @@ function School() {
     return <div>Loading...</div>;
   } else {
     return (
-      <div className="contain">
+      <div className="contain" id="schools">
        <ul>
         {items.map(item => (
 

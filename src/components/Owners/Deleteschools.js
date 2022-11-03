@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UpdateSchools from './Updateschools';
+import './Owner.css'
     const DeleteSchools = ({data, handleDeleteSchools, handleUpdateSchools}) => {
 
       const [isUpdating, setIsUpdating] = useState(false);

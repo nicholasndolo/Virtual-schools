@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import CourseCard from './CourseCard'
-
+import './Courses.css'
 function CourseList() {
   const [courses, setCourses] = useState([])
 
@@ -37,7 +37,7 @@ function CourseList() {
     ))
 
   return (
-    <div className="">
+    <div className="cards" id='courses'>
       {course}
     </div>
   );

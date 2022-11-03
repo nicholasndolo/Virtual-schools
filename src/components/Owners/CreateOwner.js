@@ -107,7 +107,7 @@ export default function CreateOwner(){
                 <button type="submit" className="btn btn-info">
                   Sign Up
                 </button>
-              </div>              
+              </div>        
             </div>
           </form>
         </div>

@@ -1,4 +1,4 @@
-const Students = () => {
+/*const Students = () => {
     return (
       <Fragment>
         <HeroSection />
@@ -17,3 +17,4 @@ const Students = () => {
   };
   
   export default Students;
+  */

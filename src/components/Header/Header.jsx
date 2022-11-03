@@ -6,20 +6,20 @@ import "./header.css";
 const navLinks = [
   {
     display: "Home",
-    url: "/",
+    url: "#",
   },
   {
     display: "About",
-    url: "/about",
+    url: "#about",
   },
 
   {
     display: "Schools",
-    url: "/schools",
+    url: "#schools",
   },
   {
     display: "Courses",
-    url: "/courses",
+    url: "#courses",
   },
   {
     display: "Enroll",

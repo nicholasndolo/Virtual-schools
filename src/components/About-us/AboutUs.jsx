@@ -5,9 +5,10 @@ import aboutImg from "../../assests/images/about-us.png";
 import CountUp from "react-countup";
 import "./about.css";
 
+
 const AboutUs = () => {
   return (
-    <section>
+    <section id="about">
       <Container>
         <Row>
           <Col lg="6" md="6">
@@ -65,6 +66,7 @@ const AboutUs = () => {
         </Row>
       </Container>
     </section>
+
   );
 };
 

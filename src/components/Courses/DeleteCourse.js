@@ -31,7 +31,7 @@ function DeleteCourse({courseId,handleDeleteCourse}) {
 	}
   return (
     <div>
-      <button onClick={submit} id={courseId} className='comment'>Delete</button>
+      <button onClick={submit} id={courseId} className='btn btn-warning mt-1'>Delete</button>
     </div>
   )
 }

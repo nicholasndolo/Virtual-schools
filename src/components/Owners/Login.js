@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(){
-  
     const [ownerLogin, setOwnerLogin] = useState({            
             email: "",
             password: "",            
@@ -45,7 +44,6 @@ export default function Login(){
                       //console.log(data.owner)newUser
         })        
     }
-    
     return (
         <div className="Auth-form-container">            
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt=""/>
@@ -85,7 +83,7 @@ export default function Login(){
                 <button type="submit" className="btn btn-info">
                   Log in
                 </button>
-              </div>              
+              </div>                 
             </div>
           </form>
         </div>

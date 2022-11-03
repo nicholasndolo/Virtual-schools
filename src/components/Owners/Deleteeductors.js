@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import UpdateEducators from "./UpdateEducators";
+import './Owner.css'
 const DeleteEductors = ({
   data,
   handleDeleteEducator,

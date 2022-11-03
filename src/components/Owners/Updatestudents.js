@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './Owner.css'
 
 const UpdateStudent = () => {
     const [student, setStudent] = useState({

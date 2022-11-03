@@ -1,6 +1,7 @@
 import React, { useState, } from "react"
 import CreateOwner from "../Owners/CreateOwner"
 import Login from "../Owners/Login"
+import './Auth.css';
 
  function Auth (props) {
   let [authMode, setAuthMode] = useState("signin")
@@ -13,12 +14,14 @@ import Login from "../Owners/Login"
     return (
       <div className="Auth-form-container">
          <Login/>
+         <p>
               <div className="text-center">
               Dont have an account yet?{" "} <br/>
               <span className="link-primary" onClick={changeAuthMode}>
                 Sign Up 
               </span> here
-              </div>     
+              </div> 
+              </p>    
           
         
       </div>
@@ -27,12 +30,14 @@ import Login from "../Owners/Login"
   return (
     <div className="Auth-form-container">
       <CreateOwner/>
+      <p>
           <div className="text-center">
             Already have an account? {" "} <br/>
             <span className="link-primary" onClick={changeAuthMode}>
               Login
             </span> here
           </div>
+          </p>
         </div>      
   )
 }

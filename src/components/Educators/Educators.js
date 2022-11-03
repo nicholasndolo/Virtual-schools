@@ -39,7 +39,6 @@ const Educators = () => {
     setData(editedResources);
   }
   return (
-    <Router> 
     <div className="App">
       <NavBar />
       <Sidebar />
@@ -57,7 +56,6 @@ const Educators = () => {
 
     
     </div>
-  </Router>
   )
 }
 

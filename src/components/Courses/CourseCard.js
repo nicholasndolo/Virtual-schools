@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import DeleteCourse from "./DeleteCourse"
 
+
 function CourseCard({handleCourseUpdate={handleCourseUpdate}, handleDeleteCourse, courseId, card, duration, title, setCourses, courses}){
 
   // function handleDelete(){
@@ -26,7 +27,9 @@ function CourseCard({handleCourseUpdate={handleCourseUpdate}, handleDeleteCourse
           <DeleteCourse courseId={courseId} handleDeleteCourse={handleDeleteCourse}/>
         </div>
     </div>
+
     )
+
 }
 
 export default CourseCard;

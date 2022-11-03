@@ -1,4 +1,4 @@
-import './src/Owner.css';
+import './Owner.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './NavbarComp';
 import React from 'react';

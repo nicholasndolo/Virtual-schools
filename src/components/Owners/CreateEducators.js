@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import './src/Owner.css'
+import './Owner.css'
 
 const CreateEducator = () => {
     const [educator, setEducator] = useState({
