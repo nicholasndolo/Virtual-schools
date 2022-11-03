@@ -10,7 +10,8 @@ const NavBar = () => {
             <Container>
             <Navbar.Brand href="#home">E-Masomo</Navbar.Brand>
 
-            <Button className='btn' variant="info">Log out</Button>{' '}
+            <Button className='btn' variant="info" 
+                to="/"onClick={() => localStorage.removeItem("jwt")}>Log out</Button>{' '}
             </Container>
         </Navbar>
       

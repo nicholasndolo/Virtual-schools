@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import ResourceForm from './ResourceForm';
 import ResourceContainer from './ResourceContainer';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import './Educator.css'
 
 const Educators = () => {
   const [data, setData] = useState ([])

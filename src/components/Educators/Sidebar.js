@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Educator.css'
 const Sidebar = () => {
   return (
     <div className='container-fluid'>
@@ -7,13 +7,13 @@ const Sidebar = () => {
             <div className='col-auto min-vh-100 bg-dark'>
                 <ul>
                     <il>
-                        <a className='nav-link px=2' href='/lessons'>
+                        <a className='nav-link px=2' href='/lesson'>
                             <i className='bi bi-book' /> <span className='ms-1 d-none d-sm-inline'>Lessons</span>
 
                         </a>
                     </il>
                     <il>
-                        <a className='nav-link px=2' href='/resources'>
+                        <a className='nav-link px=2' href='/resource'>
                             <i className='bi bi-laptop' /> <span className='ms-1 d-none d-sm-inline'>Resources</span>
 
                         </a>

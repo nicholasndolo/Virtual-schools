@@ -22,6 +22,9 @@ import DeleteEductors from "./components/Owners/Deleteeductors";
 import DeleteSchools from "./components/Owners/Deleteschools";
 import Students from "./components/Owners/Students";
 import Schools from "./components/Owners/Schools";
+import LessonList from "./components/Lessons/LessonsList";
+//import ResourceList from "./components/Educators/ResourceList";
+import ResourceContainer from "./components/Educators/ResourceContainer";
 //import Logout from "./components/Owners/Logout";
 
 function App() {
@@ -29,6 +32,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/lesson" element={<LessonList />} />
+        <Route path="/resource" element={<ResourceContainer />} />
         <Route path="/courses" element={<CourseList />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/enroll" element={<CreateOwner />} />
