@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import Resources from "./Resources";
 import CalenDar from "./Calendar";
 import { BrowserRouter as Router } from "react-router-dom";
-
+import './student.css'
 const Learn = () => {
   return (
     <>
