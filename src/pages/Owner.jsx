@@ -1,3 +1,4 @@
+import CourseList from "../components/Owners/CourseList";
 import Educator from "../components/Owners/Educators";
 import NavbarComp from "../components/Owners/NavbarComp";
 import School from "../components/Owners/Schools";
@@ -12,6 +13,7 @@ const Owner = () => {
     <Educator/>
     <Student/>
     <School/>
+    <CourseList/>
     </>
   )
   };

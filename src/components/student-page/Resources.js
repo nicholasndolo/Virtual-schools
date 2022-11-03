@@ -2,7 +2,7 @@ import React from 'react'
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import '../Styles/Resources.css'
+import './Styles/Resources.css'
 import { Container, Navbar } from 'react-bootstrap';
 
 

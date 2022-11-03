@@ -19,7 +19,7 @@ const EditResource = ({data, setIsEditing, handleUpdateResource }) => {
     function handleSubmit(e){
         e.preventDefault();
 
-        fetch(`https://virtualschools.herokuapp.com/resources/${id}`,{
+        fetch(`https://virtualschools.herokuapp.com/resources${id}`,{
             method:"PATCH",
             headers: {
                 "Content-Type": "application/json",

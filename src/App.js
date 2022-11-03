@@ -1,16 +1,16 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "./App.css"
+import "./App.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "./components/Login/Auth";
 import Home from "./pages/Home";
 import AboutUs from "./components/About-us/AboutUs";
 //import Courses from "./components/Courses-section/Courses";
 import School from "./components/School/School";
-import UpdateCourse from "./components/Courses/UpdateCourse";
+import UpdateCourse from "./components/Owners/UpdateCourse";
 import Educators from "./components/Educators/Educators";
 import Owner from "./pages/Owner";
 import CreateOwner from "./components/Owners/CreateOwner";
-import CourseList from "./components/Courses/CourseList";
+import CourseList from "./components/Owners/CourseList";
 import CreateStudent from "./components/Owners/Createstudents";
 import CreateEducator from "./components/Owners/CreateEducators";
 import CreateSchool from "./components/Owners/Createschools";
@@ -26,7 +26,9 @@ import LessonList from "./components/Lessons/LessonsList";
 //import ResourceList from "./components/Educators/ResourceList";
 import ResourceContainer from "./components/Educators/ResourceContainer";
 import LoginEducator from "./components/Educators/LoginEducator";
-import Learn from "./components/student-page/components/Learn";
+import Learn from "./components/student-page/Learn";
+import ResourceForm from "./components/Educators/ResourceForm";
+import StudentLogin from "./components/student-page/Studentlogin";
 //import Logout from "./components/Owners/Logout";
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/learn" element={<Learn/>} />
+        <Route path="/stulogin" element={<LoginEducator/>} />
+        <Route path="/loginedu" element={<StudentLogin/>} />
         <Route path="/lesson" element={<LessonList />} />
         <Route path="/resource" element={<ResourceContainer />} />
         <Route path="/courses" element={<CourseList />} />
@@ -44,7 +48,7 @@ function App() {
         <Route path="/schools" element={<School />} />
         <Route path="/course/:courseId" element={<UpdateCourse />} />/
         <Route path="/educators" element={<Educators />} />
-        <Route path="/educators" element={<LoginEducator/>} />
+        <Route path="/login-educator" element={<LoginEducator/>} />
         <Route path="/admin" element={<Owner />} />
         <Route path="/educator" element={<Educators />} />
         <Route path="/create/educator" element={<CreateEducator />} />
@@ -58,6 +62,7 @@ function App() {
         <Route path="/create/school" element={<CreateSchool />} />
         <Route path="/update/school" element={<UpdateSchool />} />
         <Route path="/delete/school" element={<DeleteSchools />} />
+        <Route exact path='/create-resource' element={<ResourceForm/>} />
       </Routes>
     </BrowserRouter>
   );

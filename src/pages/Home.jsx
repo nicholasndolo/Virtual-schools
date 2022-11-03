@@ -10,24 +10,25 @@ import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
 //import CreateStudent from "../components/";
 //import LessonList from "../components/Lessons/LessonsList";
-import CourseList from "../components/Courses/CourseList";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import School from "../components/School/School";
+//import School from "../components/School/School";
+import Drop from "../components/Dropdown";
 const Home = () => {
   return (
     <Fragment>
       <Header />
+      <Drop/>
       <HeroSection />
       <CompanySection />
-      <School/>
-      <CourseList/>
       <AboutUs />
+    
+      {/* <School /> */}
       <ChooseUs />
       <Features />
       <Testimonials />
       <Newsletter />
-      <Footer/>
+      <Footer />
     </Fragment>
   );
 };

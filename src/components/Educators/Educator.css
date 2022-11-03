@@ -23,3 +23,7 @@
       width: 200px;
   } 
   */
+  .edu-card{
+    display: flex;
+    margin: 10px;
+}

@@ -127,8 +127,7 @@ label {
   font-size: 15px;
   color: rgb(34, 34, 34);
 }
-.owners{
+.owner{
   display:flex;
-  justify-content: center;
 
 }

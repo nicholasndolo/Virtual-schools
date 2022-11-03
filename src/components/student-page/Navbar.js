@@ -1,9 +1,9 @@
-import React from 'react'
+import React,{Link} from 'react'
 import Container from 'react-bootstrap/Container';
 // import moment from 'moment';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import '../Styles/Navbar.css';
+import './Styles/Navbar.css';
 
 const NavBar = () => {
   return (
@@ -12,7 +12,8 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand href="#home">E-Masomo</Navbar.Brand>
 
-          <Button className='btn' variant="info">Log out</Button>{' '}
+          <Button className='btn' variant="info"  as={Link} to="/"
+                onClick={() => localStorage.removeItem("jwt")}>Log out</Button>{' '}
 
 
         </Container>

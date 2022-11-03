@@ -1,16 +1,16 @@
 import React,{ useState, useEffect} from 'react'; 
-import NavBar from './Navbar';
-import Sidebar from './Sidebar';
-import ResourceForm from './ResourceForm';
+//import NavBar from './NavBar';
+import EducatorCard from './EducatorCard';
 import ResourceContainer from './ResourceContainer';
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { BrowserRouter as Route, Routes} from "react-router-dom";
 import './Educator.css'
+import NavBar from '../student-page/Navbar';
 
 const Educators = () => {
   const [data, setData] = useState ([])
 
   useEffect(() =>{
-    fetch('https://virtualschools.herokuapp.com/resources/')
+    fetch('https://virtualschools.herokuapp.com/resources')
     .then(r => r.json())
     .then(data =>{
       setData(data)
@@ -41,9 +41,9 @@ const Educators = () => {
   }
   return (
     <div className="App">
-      <NavBar />
-      <Sidebar />
-      <Routes>
+      <NavBar/>
+      <EducatorCard/>
+      {/* <Routes>
         <Route exact path='/resources' element={
           <ResourceContainer
           data={data}
@@ -52,8 +52,7 @@ const Educators = () => {
           />
         }
         />
-        <Route exact path='/create-resource' element={<ResourceForm/>} />
-      </Routes>
+      </Routes> */}
 
     
     </div>
