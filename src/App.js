@@ -25,6 +25,7 @@ import Schools from "./components/Owners/Schools";
 import LessonList from "./components/Lessons/LessonsList";
 //import ResourceList from "./components/Educators/ResourceList";
 import ResourceContainer from "./components/Educators/ResourceContainer";
+import LoginEducator from "./components/Educators/LoginEducator";
 //import Logout from "./components/Owners/Logout";
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
         <Route path="/schools" element={<School />} />
         <Route path="/course/:courseId" element={<UpdateCourse />} />/
         <Route path="/educators" element={<Educators />} />
+        <Route path="/educators" element={<LoginEducator/>} />
         <Route path="/admin" element={<Owner />} />
         <Route path="/educator" element={<Educators />} />
         <Route path="/create/educator" element={<CreateEducator />} />
