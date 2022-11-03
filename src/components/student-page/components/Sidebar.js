@@ -13,12 +13,7 @@ const Sidebar = () => {
 
                         </a>
                     </il>
-                    <il>
-                        <a className='nav-link px=2' href='/tutorial'>
-                            <i className='bi bi-laptop' /> <span className='ms-1 d-none d-sm-inline'>Tutorial</span>
-
-                        </a>
-                    </il>
+              
                     <il>
                         <a className='nav-link px=2' href='/group'>
                             <i className='bi bi-people' /> <span className='ms-1 d-none d-sm-inline'>My Group</span>
