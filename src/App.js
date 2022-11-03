@@ -26,6 +26,7 @@ import LessonList from "./components/Lessons/LessonsList";
 //import ResourceList from "./components/Educators/ResourceList";
 import ResourceContainer from "./components/Educators/ResourceContainer";
 import LoginEducator from "./components/Educators/LoginEducator";
+import Learn from "./components/student-page/components/Learn";
 //import Logout from "./components/Owners/Logout";
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/learn" element={<Learn/>} />
         <Route path="/lesson" element={<LessonList />} />
         <Route path="/resource" element={<ResourceContainer />} />
         <Route path="/courses" element={<CourseList />} />
@@ -59,6 +61,6 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
-}
+  }
 
 export default App;
