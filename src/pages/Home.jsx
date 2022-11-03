@@ -9,7 +9,7 @@ import Features from "../components/Feature-section/Features";
 import Testimonials from "../components/Testimonial/Testimonials";
 import Newsletter from "../components/Newsletter/Newsletter";
 //import CreateStudent from "../components/";
-import LessonList from "../components/Lessons/LessonsList";
+//import LessonList from "../components/Lessons/LessonsList";
 import CourseList from "../components/Courses/CourseList";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -22,7 +22,6 @@ const Home = () => {
       <CompanySection />
       <School/>
       <CourseList/>
-      <LessonList/>
       <AboutUs />
       <ChooseUs />
       <Features />
