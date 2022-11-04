@@ -27,7 +27,7 @@ export default function StudentLogin(){
           if (res.ok) {
             res.json().then((res)=> {
             localStorage.setItem("jwt", JSON.stringify(res))})
-            navigate("/learns")
+            navigate("/learn")
           } else {
             res.json().then((err) => (setError(err.message)))
           }
@@ -41,7 +41,7 @@ export default function StudentLogin(){
             <div className="Auth-form-content">
             <p className='error'>{ error }</p>
               <h3 className="Auth-form-title">Welcome back</h3>
-              <h4 className="Auth-form-subtitle">Login as an Student: </h4>                             
+              <h4 className="Auth-form-subtitle">Login as a Student: </h4>                             
               <div className="form-group mt-3">
                 <label>Email address</label>
                 <input

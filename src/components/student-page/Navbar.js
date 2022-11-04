@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import './Styles/Navbar.css';
+import { Nav } from "react-bootstrap";
 
 const NavBar = () => {
   return (
@@ -12,8 +13,8 @@ const NavBar = () => {
         <Container>
           <Navbar.Brand href="#home">E-Masomo</Navbar.Brand>
 
-          <Button className='btn' variant="info"  as={Link} to="/"
-                onClick={() => localStorage.removeItem("jwt")}>Log out</Button>{' '}
+          <Nav.Link className='btn' variant="info"  as={Link} to="/"
+                onClick={() => localStorage.removeItem("jwt")}>Log out</Nav.Link>{' '}
 
 
         </Container>

@@ -10,8 +10,8 @@ function Drop() {
         </button>
         <div class="dropdown-content">
           {/* <a href="/login">Owner</a> */}
-          <a href="/stulogin">Student</a>
-          <a href="/loginedu">Educator</a>
+          <a href="/stulogin">Educator</a>
+          <a href="/loginedu">Student</a>
         </div>
       </div>
     // </div>
