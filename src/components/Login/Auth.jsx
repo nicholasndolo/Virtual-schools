@@ -1,6 +1,6 @@
 import React, { useState, } from "react"
-import CreateOwner from "../Owners/CreateOwner"
-import Login from "../Owners/Login"
+import CreateApprover from "../Approver/createApprover";
+import Login from "../Approver/Login"
 import './Auth.css';
 
  function Auth (props) {
@@ -29,7 +29,7 @@ import './Auth.css';
   }
   return (
     <div className="Auth-form-container">
-      <CreateOwner/>
+      <CreateApprover/>
       <p>
           <div className="text-center">
             Already have an account? {" "} <br/>

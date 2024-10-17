@@ -1,57 +1,70 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import { Alert } from 'react-alert'
 
-export default function Login(){
-    const [ownerLogin, setOwnerLogin] = useState({            
+export default function CreateApprover(){
+    const [owner, setOwner] = useState({
+            name: "",
             email: "",
-            password: "",            
+            password: "",
+            password_confirmation: "",
           })
-    const [error, setError] = useState("");
-    // const [token, setToken] = useState("")
-    // useEffect((() => {
-    //   setToken(localStorage.getItem("jwt"))
-    // }), [])
+    const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
     function handleChange(e) {
-            setOwnerLogin({ ...ownerLogin, [e.target.name]: e.target.value });
+            setOwner({ ...owner, [e.target.name]: e.target.value });
     }
 
     function handleSubmit(e) {
         e.preventDefault()
-        // e.target.reset()
-        fetch("https://virtualschools.herokuapp.com/owner/login", {
+        fetch("https://virtualschools.herokuapp.com/owners", {
             method: "POST",
             headers: {
                   "Content-Type": "application/json",
                   Accept: "application/json",
                 },
-            body: JSON.stringify(ownerLogin) 
+            body: JSON.stringify(owner) 
         })
         .then((r) => {
             if (r.ok) {
-                navigate("/admin") 
+                navigate("/login") 
             } else {
-                r.json().then((err) => (setError(err.message)))
+                r.json().then((err) => setErrors(err.errors))
             }
         })
         .then((data) => {
-          // "jwt", JSON.stringify(newUser.jwt)
                       // save the token to localStorage for future access
-                      localStorage.setItem("jwt", JSON.stringify(ownerLogin.jwt))
-                      // localStorage.setItem("jwt", data.jwt);
+                      localStorage.setItem("jwt", data.jwt);
                       // save the owner somewhere (in state!) to log the owner in
-                      setOwnerLogin(data.ownerLogin);
-                      //console.log(data.owner)newUser
+                      console.log(setOwner(data.owner));
+                      //console.log(data.owner)
         })        
     }
+    const errorMessage = (errors.map((error, index)=>(
+        <ul>
+          <li className='error' key={index}>{error}</li>
+        </ul>
+      )))
     return (
-        <div className="Auth-form-container">            
+        <div className="Auth-form-container">
+            {errors.length > 0?  errorMessage : null}
           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt=""/>
           <form className="Auth-form"  onSubmit={handleSubmit}>
             <div className="Auth-form-content">
-            <p className='error'>{ error }</p>
-              <h3 className="Auth-form-title">Welcome back</h3>
-              <h4 className="Auth-form-subtitle">Enter Details Here: </h4>                             
+              <h3 className="Auth-form-title">Create an account</h3>
+              <h4 className="Auth-form-subtitle">Let's get started: </h4>
+              <div className="form-group mt-3">
+                <label>Full Name</label>
+                <input
+                  type="name"
+                  className="form-control mt-1"
+                  name="name"
+                  placeholder="Enter First and Last Name"
+                  value={owner.name}
+                  onChange= { handleChange }
+                  required
+                />
+              </div>             
               <div className="form-group mt-3">
                 <label>Email address</label>
                 <input
@@ -59,7 +72,7 @@ export default function Login(){
                   className="form-control mt-1"
                   name="email"
                   placeholder="Enter Email Address"
-                  value={ownerLogin.email}
+                  value={owner.email}
                   onChange= { handleChange }
                   required
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
@@ -72,20 +85,38 @@ export default function Login(){
                   className="form-control mt-1"
                   name="password"
                   placeholder="Password must begin with caps"
-                  value={ownerLogin.password}
+                  value={owner.password}
                   onChange= { handleChange }
                   required
                   pattern=".{8,}"
                 />
               </div>
-              
+              <div className="form-group mt-3">
+                <label>Confirm password</label>
+                <input
+                  type="password"
+                  className="form-control mt-1"
+                  name="password_confirmation"
+                  placeholder="Confirm password"
+                  value={owner.password_confirmation}
+                  onChange= { handleChange }
+                  required
+                />
+              </div>
               <div className="d-grid gap-2 mt-3">
                 <button type="submit" className="btn btn-info">
-                  Log in
+                  Sign Up
                 </button>
-              </div>                 
+              </div>        
             </div>
           </form>
         </div>
     )   
 }
+
+
+
+
+
+
+

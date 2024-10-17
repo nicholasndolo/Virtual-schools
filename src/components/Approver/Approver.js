@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavbarComp from './NavbarComp';
 import React from 'react';
 
-function Owner() {
+function Approver() {
   return (
     <div className="App">
       <NavbarComp />   
@@ -12,4 +12,4 @@ function Owner() {
   );
 }
 
-export default Owner;
+export default Approver;

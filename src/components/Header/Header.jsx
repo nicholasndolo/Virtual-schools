@@ -4,14 +4,7 @@ import "./header.css";
 
 
 const navLinks = [
-  {
-    display: "Home",
-    url: "#",
-  },
-  {
-    display: "About",
-    url: "#about",
-  },
+
 
   {
     display: "Schools",

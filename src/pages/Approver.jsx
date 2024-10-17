@@ -6,7 +6,7 @@ import Student from "../components/Owners/Students";
 
 
 
-const Owner = () => {
+const Approver = () => {
   return(
     <>
     <NavbarComp/>
@@ -18,5 +18,5 @@ const Owner = () => {
   )
   };
   
-  export default Owner;
+  export default Approver;
   
